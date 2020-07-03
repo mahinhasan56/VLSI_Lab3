@@ -1,0 +1,152 @@
+// DSCH 2.7a
+// 10/12/2017 2:56:51 AM
+// E:\CSE\15th\Export_dsch2\FullAdder_ThreeToEightDecoder.sch
+
+module FullAdder_ThreeToEightDecoder( A,B,Cin,CarryOut,SUM);
+ input A,B,Cin;
+ output CarryOut,SUM;
+ wire w14,w15,w16,w17,w18,w19,w20,w21;
+ wire w22,w23,w24,w25,w26,w27,w28,w29;
+ wire w30,w31,w32,w33,w34,w35,w36,w37;
+ wire w38,w39,w40,w41,w42,w43,w44,w45;
+ wire w46,w47,w48,w49,w50,w51,w52,w53;
+ wire w54,w55,w56,w57,w58,w59,w60,w61;
+ wire w62,w63,w64,w65,w66;
+ pmos #(55) pmos_Tw1_Th1_Tw1_Th1(w15,vdd,w14); //  
+ pmos #(55) pmos_Tw2_Th2_Tw2_Th2(w15,vdd,A); //  
+ nmos #(55) nmos_Tw3_Th3_Tw3_Th3(w15,w16,w14); //  
+ nmos #(14) nmos_Tw4_Th4_Tw4_Th4(w16,vss,A); //  
+ pmos #(41) pmos_AS1_Tw5_Th5_Tw5_Th5(w17,vdd,w15); //  
+ nmos #(41) nmos_AS2_Tw6_Th6_Tw6_Th6(w17,vss,w15); //  
+ pmos #(55) pmos_Tw7_Th7_Tw7_Th7(w18,vdd,w17); //  
+ pmos #(55) pmos_Tw8_Th8_Tw8_Th8(w18,vdd,w19); //  
+ nmos #(55) nmos_Tw9_Th9_Tw9_Th9(w18,w20,w17); //  
+ nmos #(14) nmos_Tw10_Th10_Tw10_Th10(w20,vss,w19); //  
+ pmos #(35) pmos_AS1_Tw11_Th11_Tw11_Th11(w6,vdd,w18); //  
+ nmos #(35) nmos_AS2_Tw12_Th12_Tw12_Th12(w6,vss,w18); //  
+ pmos #(55) pmos_Tw1_Th13_Tw13_Th13(w21,vdd,w14); //  
+ pmos #(55) pmos_Tw2_Th14_Tw14_Th14(w21,vdd,w22); //  
+ nmos #(55) nmos_Tw3_Th15_Tw15_Th15(w21,w23,w14); //  
+ nmos #(14) nmos_Tw4_Th16_Tw16_Th16(w23,vss,w22); //  
+ pmos #(41) pmos_AS1_Tw5_Th17_Tw17_Th17(w24,vdd,w21); //  
+ nmos #(41) nmos_AS2_Tw6_Th18_Tw18_Th18(w24,vss,w21); //  
+ pmos #(55) pmos_Tw7_Th19_Tw19_Th19(w25,vdd,w24); //  
+ pmos #(55) pmos_Tw8_Th20_Tw20_Th20(w25,vdd,B); //  
+ nmos #(55) nmos_Tw9_Th21_Tw21_Th21(w25,w26,w24); //  
+ nmos #(14) nmos_Tw10_Th22_Tw22_Th22(w26,vss,B); //  
+ pmos #(35) pmos_AS1_Tw11_Th23_Tw23_Th23(w11,vdd,w25); //  
+ nmos #(35) nmos_AS2_Tw12_Th24_Tw24_Th24(w11,vss,w25); //  
+ pmos #(55) pmos_Tw1_Th25_Tw25_Th25(w27,vdd,w14); //  
+ pmos #(55) pmos_Tw2_Th26_Tw26_Th26(w27,vdd,w22); //  
+ nmos #(55) nmos_Tw3_Th27_Tw27_Th27(w27,w28,w14); //  
+ nmos #(14) nmos_Tw4_Th28_Tw28_Th28(w28,vss,w22); //  
+ pmos #(41) pmos_AS1_Tw5_Th29_Tw29_Th29(w29,vdd,w27); //  
+ nmos #(41) nmos_AS2_Tw6_Th30_Tw30_Th30(w29,vss,w27); //  
+ pmos #(55) pmos_Tw7_Th31_Tw31_Th31(w30,vdd,w29); //  
+ pmos #(55) pmos_Tw8_Th32_Tw32_Th32(w30,vdd,w19); //  
+ nmos #(55) nmos_Tw9_Th33_Tw33_Th33(w30,w31,w29); //  
+ nmos #(14) nmos_Tw10_Th34_Tw34_Th34(w31,vss,w19); //  
+ pmos #(21) pmos_AS1_Tw11_Th35_Tw35_Th35(w4,vdd,w30); //  
+ nmos #(21) nmos_AS2_Tw12_Th36_Tw36_Th36(w4,vss,w30); //  
+ pmos #(55) pmos_Tw1_Th37_Tw37_Th37(w32,vdd,w14); //  
+ pmos #(55) pmos_Tw2_Th38_Tw38_Th38(w32,vdd,A); //  
+ nmos #(55) nmos_Tw3_Th39_Tw39_Th39(w32,w33,w14); //  
+ nmos #(14) nmos_Tw4_Th40_Tw40_Th40(w33,vss,A); //  
+ pmos #(41) pmos_AS1_Tw5_Th41_Tw41_Th41(w34,vdd,w32); //  
+ nmos #(41) nmos_AS2_Tw6_Th42_Tw42_Th42(w34,vss,w32); //  
+ pmos #(55) pmos_Tw7_Th43_Tw43_Th43(w35,vdd,w34); //  
+ pmos #(55) pmos_Tw8_Th44_Tw44_Th44(w35,vdd,B); //  
+ nmos #(55) nmos_Tw9_Th45_Tw45_Th45(w35,w36,w34); //  
+ nmos #(14) nmos_Tw10_Th46_Tw46_Th46(w36,vss,B); //  
+ pmos #(35) pmos_AS1_Tw11_Th47_Tw47_Th47(w5,vdd,w35); //  
+ nmos #(35) nmos_AS2_Tw12_Th48_Tw48_Th48(w5,vss,w35); //  
+ pmos #(64) pmos_AS49_Tw49_Th49(w19,vdd,B); //  
+ nmos #(64) nmos_AS50_Tw50_Th50(w19,vss,B); //  
+ pmos #(64) pmos_AS51_Tw51_Th51(w22,vdd,A); //  
+ nmos #(64) nmos_AS52_Tw52_Th52(w22,vss,A); //  
+ pmos #(99) pmos_Tw53_Th53(w14,vdd,Cin); //  
+ nmos #(99) nmos_Tw54_Th54(w14,vss,Cin); //  
+ pmos #(55) pmos_Tw1_Th1_Tw55_Th55(w37,vdd,Cin); //  
+ pmos #(55) pmos_Tw2_Th2_Tw56_Th56(w37,vdd,A); //  
+ nmos #(55) nmos_Tw3_Th3_Tw57_Th57(w37,w38,Cin); //  
+ nmos #(14) nmos_Tw4_Th4_Tw58_Th58(w38,vss,A); //  
+ pmos #(41) pmos_AS1_Tw5_Th5_Tw59_Th59(w39,vdd,w37); //  
+ nmos #(41) nmos_AS2_Tw6_Th6_Tw60_Th60(w39,vss,w37); //  
+ pmos #(55) pmos_Tw7_Th7_Tw61_Th61(w40,vdd,w39); //  
+ pmos #(55) pmos_Tw8_Th8_Tw62_Th62(w40,vdd,w41); //  
+ nmos #(55) nmos_Tw9_Th9_Tw63_Th63(w40,w42,w39); //  
+ nmos #(14) nmos_Tw10_Th10_Tw64_Th64(w42,vss,w41); //  
+ pmos #(35) pmos_AS1_Tw11_Th11_Tw65_Th65(w8,vdd,w40); //  
+ nmos #(35) nmos_AS2_Tw12_Th12_Tw66_Th66(w8,vss,w40); //  
+ pmos #(55) pmos_Tw1_Th13_Tw67_Th67(w43,vdd,Cin); //  
+ pmos #(55) pmos_Tw2_Th14_Tw68_Th68(w43,vdd,w44); //  
+ nmos #(55) nmos_Tw3_Th15_Tw69_Th69(w43,w45,Cin); //  
+ nmos #(14) nmos_Tw4_Th16_Tw70_Th70(w45,vss,w44); //  
+ pmos #(41) pmos_AS1_Tw5_Th17_Tw71_Th71(w46,vdd,w43); //  
+ nmos #(41) nmos_AS2_Tw6_Th18_Tw72_Th72(w46,vss,w43); //  
+ pmos #(55) pmos_Tw7_Th19_Tw73_Th73(w47,vdd,w46); //  
+ pmos #(55) pmos_Tw8_Th20_Tw74_Th74(w47,vdd,B); //  
+ nmos #(55) nmos_Tw9_Th21_Tw75_Th75(w47,w48,w46); //  
+ nmos #(14) nmos_Tw10_Th22_Tw76_Th76(w48,vss,B); //  
+ pmos #(35) pmos_AS1_Tw11_Th23_Tw77_Th77(w10,vdd,w47); //  
+ nmos #(35) nmos_AS2_Tw12_Th24_Tw78_Th78(w10,vss,w47); //  
+ pmos #(55) pmos_Tw1_Th25_Tw79_Th79(w49,vdd,Cin); //  
+ pmos #(55) pmos_Tw2_Th26_Tw80_Th80(w49,vdd,w44); //  
+ nmos #(55) nmos_Tw3_Th27_Tw81_Th81(w49,w50,Cin); //  
+ nmos #(14) nmos_Tw4_Th28_Tw82_Th82(w50,vss,w44); //  
+ pmos #(41) pmos_AS1_Tw5_Th29_Tw83_Th83(w51,vdd,w49); //  
+ nmos #(41) nmos_AS2_Tw6_Th30_Tw84_Th84(w51,vss,w49); //  
+ pmos #(55) pmos_Tw7_Th31_Tw85_Th85(w52,vdd,w51); //  
+ pmos #(55) pmos_Tw8_Th32_Tw86_Th86(w52,vdd,w41); //  
+ nmos #(55) nmos_Tw9_Th33_Tw87_Th87(w52,w53,w51); //  
+ nmos #(14) nmos_Tw10_Th34_Tw88_Th88(w53,vss,w41); //  
+ pmos #(35) pmos_AS1_Tw11_Th35_Tw89_Th89(w7,vdd,w52); //  
+ nmos #(35) nmos_AS2_Tw12_Th36_Tw90_Th90(w7,vss,w52); //  
+ pmos #(55) pmos_Tw1_Th37_Tw91_Th91(w54,vdd,Cin); //  
+ pmos #(55) pmos_Tw2_Th38_Tw92_Th92(w54,vdd,A); //  
+ nmos #(55) nmos_Tw3_Th39_Tw93_Th93(w54,w55,Cin); //  
+ nmos #(14) nmos_Tw4_Th40_Tw94_Th94(w55,vss,A); //  
+ pmos #(41) pmos_AS1_Tw5_Th41_Tw95_Th95(w56,vdd,w54); //  
+ nmos #(41) nmos_AS2_Tw6_Th42_Tw96_Th96(w56,vss,w54); //  
+ pmos #(55) pmos_Tw7_Th43_Tw97_Th97(w57,vdd,w56); //  
+ pmos #(55) pmos_Tw8_Th44_Tw98_Th98(w57,vdd,B); //  
+ nmos #(55) nmos_Tw9_Th45_Tw99_Th99(w57,w58,w56); //  
+ nmos #(14) nmos_Tw10_Th46_Tw100_Th100(w58,vss,B); //  
+ pmos #(49) pmos_AS1_Tw11_Th47_Tw101_Th101(w9,vdd,w57); //  
+ nmos #(49) nmos_AS2_Tw12_Th48_Tw102_Th102(w9,vss,w57); //  
+ pmos #(64) pmos_AS49_Tw103_Th103(w41,vdd,B); //  
+ nmos #(64) nmos_AS50_Tw104_Th104(w41,vss,B); //  
+ pmos #(64) pmos_AS51_Tw105_Th105(w44,vdd,A); //  
+ nmos #(64) nmos_AS52_Tw106_Th106(w44,vss,A); //  
+ pmos #(13) pmos_Fo1_Fo107(w59,vdd,w6); //  
+ pmos #(13) pmos_Fo2_Fo108(w60,w59,w11); //  
+ pmos #(13) pmos_Fo3_Fo109(w61,w60,w7); //  
+ pmos #(73) pmos_Fo4_Fo110(w62,w61,w9); //  
+ nmos #(73) nmos_Fo5_Fo111(w62,vss,w7); //  
+ nmos #(73) nmos_Fo6_Fo112(w62,vss,w6); //  
+ nmos #(73) nmos_Fo7_Fo113(w62,vss,w11); //  
+ nmos #(73) nmos_Fo8_Fo114(w62,vss,w9); //  
+ pmos #(26) pmos_Tw9_Fo115(SUM,vdd,w62); //  
+ nmos #(26) nmos_Tw10_Fo116(SUM,vss,w62); //  
+ pmos #(13) pmos_Fo1_Fo117(w63,vdd,w5); //  
+ pmos #(13) pmos_Fo2_Fo118(w64,w63,w8); //  
+ pmos #(13) pmos_Fo3_Fo119(w65,w64,w10); //  
+ pmos #(73) pmos_Fo4_Fo120(w66,w65,w9); //  
+ nmos #(73) nmos_Fo5_Fo121(w66,vss,w10); //  
+ nmos #(73) nmos_Fo6_Fo122(w66,vss,w5); //  
+ nmos #(73) nmos_Fo7_Fo123(w66,vss,w8); //  
+ nmos #(73) nmos_Fo8_Fo124(w66,vss,w9); //  
+ pmos #(26) pmos_Tw9_Fo125(CarryOut,vdd,w66); //  
+ nmos #(26) nmos_Tw10_Fo126(CarryOut,vss,w66); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 A=~A;
+#2000 B=~B;
+#4000 Cin=~Cin;
+
+// Simulation parameters
+// A CLK 10 10
+// B CLK 20 20
+// Cin CLK 40 40

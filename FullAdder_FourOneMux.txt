@@ -1,0 +1,74 @@
+// DSCH 2.7a
+// 10/12/2017 2:38:16 AM
+// E:\CSE\15th\Export_dsch2\FullAdder_FourOneMux.sch
+
+module FullAdder_FourOneMux( Cin,B,A,Sum,Cout);
+ input Cin,B,A;
+ output Sum,Cout;
+ wire w7,w8,w9,w10,w11,w12,w13,w14;
+ wire w15,w16,w17,w18,w19,w20,w21,w22;
+ wire w23,w24,w25,w26,w27,w28,w29,w30;
+ wire w31,w32,w33,w34,w35,w36,w37,w38;
+ wire w39,w40,w41,w42,w43,w44;
+ nmos #(12) nmos_Fo1(w7,w2,B); //  
+ nmos #(44) nmos_Fo2(Sum,w7,w8); //  
+ nmos #(12) nmos_Fo3(w10,w2,w9); //  
+ nmos #(44) nmos_Fo4(Sum,w10,Cin); //  
+ nmos #(12) nmos_Fo5(w11,A,B); //  
+ nmos #(44) nmos_Fo6(Sum,w11,Cin); //  
+ nmos #(12) nmos_Fo7(w12,A,w9); //  
+ nmos #(44) nmos_Fo8(Sum,w12,w8); //  
+ pmos #(36) pmos_AS1_Fo9(w8,vdd,Cin); //  
+ nmos #(36) nmos_AS2_Fo10(w8,vss,Cin); //  
+ pmos #(36) pmos_AS3_Fo11(w9,vdd,B); //  
+ nmos #(36) nmos_AS4_Fo12(w9,vss,B); //  
+ nmos #(13) nmos_Fo5_Fo13(w15,w13,w14); //  
+ nmos #(40) nmos_Fo6_Fo14(w17,w15,w16); //  
+ nmos #(13) nmos_Fo7_Fo15(w20,w18,w19); //  
+ nmos #(40) nmos_Fo8_Fo16(w17,w20,w21); //  
+ nmos #(13) nmos_Fo9_Fo17(w23,w22,w14); //  
+ nmos #(40) nmos_Fo10_Fo18(w17,w23,w21); //  
+ nmos #(13) nmos_Fo11_Fo19(w25,w24,w19); //  
+ nmos #(40) nmos_Fo12_Fo20(w17,w25,w16); //  
+ pmos #(39) pmos_AS1_Fo13_Fo21(w16,vdd,w21); //  
+ nmos #(39) nmos_AS2_Fo14_Fo22(w16,vss,w21); //  
+ pmos #(39) pmos_AS3_Fo15_Fo23(w19,vdd,w14); //  
+ nmos #(39) nmos_AS4_Fo16_Fo24(w19,vss,w14); //  
+ nmos #(12) nmos_Fo25(w26,A,B); //  
+ nmos #(44) nmos_Fo26(Cout,w26,w27); //  
+ nmos #(12) nmos_Fo27(w29,A,w28); //  
+ nmos #(44) nmos_Fo28(Cout,w29,Cin); //  
+ nmos #(12) nmos_Fo29(w30,vss,B); //  
+ nmos #(44) nmos_Fo30(Cout,w30,Cin); //  
+ nmos #(12) nmos_Fo31(w31,vss,w28); //  
+ nmos #(44) nmos_Fo32(Cout,w31,w27); //  
+ pmos #(36) pmos_AS1_Fo33(w27,vdd,Cin); //  
+ nmos #(36) nmos_AS2_Fo34(w27,vss,Cin); //  
+ pmos #(36) pmos_AS3_Fo35(w28,vdd,B); //  
+ nmos #(36) nmos_AS4_Fo36(w28,vss,B); //  
+ nmos #(13) nmos_Fo5_Fo37(w34,w32,w33); //  
+ nmos #(40) nmos_Fo6_Fo38(w36,w34,w35); //  
+ nmos #(13) nmos_Fo7_Fo39(w39,w37,w38); //  
+ nmos #(40) nmos_Fo8_Fo40(w36,w39,w40); //  
+ nmos #(13) nmos_Fo9_Fo41(w42,w41,w33); //  
+ nmos #(40) nmos_Fo10_Fo42(w36,w42,w40); //  
+ nmos #(13) nmos_Fo11_Fo43(w44,w43,w38); //  
+ nmos #(40) nmos_Fo12_Fo44(w36,w44,w35); //  
+ pmos #(39) pmos_AS1_Fo13_Fo45(w35,vdd,w40); //  
+ nmos #(39) nmos_AS2_Fo14_Fo46(w35,vss,w40); //  
+ pmos #(39) pmos_AS3_Fo15_Fo47(w38,vdd,w33); //  
+ nmos #(39) nmos_AS4_Fo16_Fo48(w38,vss,w33); //  
+ pmos #(30) pmos_Tw49(w2,vdd,A); //  
+ nmos #(30) nmos_Tw50(w2,vss,A); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 Cin=~Cin;
+#2000 B=~B;
+#4000 A=~A;
+
+// Simulation parameters
+// Cin CLK 10 10
+// B CLK 20 20
+// A CLK 40 40

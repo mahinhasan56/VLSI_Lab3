@@ -1,0 +1,29 @@
+// DSCH 2.7a
+// 10/12/2017 2:49:48 AM
+// E:\CSE\15th\Export_dsch2\Four_ip_NOR.sch
+
+module Four_ip_NOR( a4,a3,a2,a1,output1);
+ input a4,a3,a2,a1;
+ output output1;
+ pmos #(10) pmos(w2,vdd,a1); // 2.0u 0.12u
+ pmos #(10) pmos(w4,w2,a2); // 2.0u 0.12u
+ pmos #(10) pmos(w6,w4,a3); // 2.0u 0.12u
+ pmos #(38) pmos(output1,w6,a4); // 2.0u 0.12u
+ nmos #(38) nmos(output1,vss,a3); // 1.0u 0.12u
+ nmos #(38) nmos(output1,vss,a1); // 1.0u 0.12u
+ nmos #(38) nmos(output1,vss,a2); // 1.0u 0.12u
+ nmos #(38) nmos(output1,vss,a4); // 1.0u 0.12u
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 a4=~a4;
+#2000 a3=~a3;
+#4000 a2=~a2;
+#8000 a1=~a1;
+
+// Simulation parameters
+// a4 CLK 10 10
+// a3 CLK 20 20
+// a2 CLK 40 40
+// a1 CLK 80 80

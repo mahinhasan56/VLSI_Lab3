@@ -1,0 +1,189 @@
+// DSCH 2.7a
+// 10/10/2017 5:53:07 PM
+// D:\CLOUD LAB\Homework3\SixteenToOne_MUX.sch
+
+module SixteenToOne_MUX( in1,in2,in3,in4,in5,in6,in7,in8,
+ in9,in10,in11,in12,in13,in14,in15,in16,
+ A,B,C,D,Output);
+ input in1,in2,in3,in4,in5,in6,in7,in8;
+ input in9,in10,in11,in12,in13,in14,in15,in16;
+ input A,B,C,D;
+ output Output;
+ wire w26,w27,w28,w29,w30,w31,w32,w33;
+ wire w34,w35,w36,w37,w38,w39,w40,w41;
+ wire w42,w43,w44,w45,w46,w47,w48,w49;
+ wire w50,w51,w52,w53,w54,w55,w56,w57;
+ wire w58,w59,w60,w61,w62,w63,w64,w65;
+ wire w66,w67,w68,w69,w70,w71,w72,w73;
+ wire w74,w75,w76,w77,w78,w79,w80,w81;
+ wire w82,w83,w84,w85,w86,w87,w88,w89;
+ wire w90,w91,w92,w93,w94,w95,w96,w97;
+ wire w98,w99,w100,w101,w102,w103,w104,w105;
+ wire w106,w107,w108,w109,w110,w111,w112,w113;
+ wire w114,w115,w116,w117,w118,w119,w120;
+ nmos #(12) nmos_Fo1(w26,in6,C); //  
+ nmos #(44) nmos_Fo2(w7,w26,w27); //  
+ nmos #(12) nmos_Fo3(w29,in7,w28); //  
+ nmos #(44) nmos_Fo4(w7,w29,D); //  
+ nmos #(12) nmos_Fo5(w30,in5,C); //  
+ nmos #(44) nmos_Fo6(w7,w30,D); //  
+ nmos #(12) nmos_Fo7(w31,in8,w28); //  
+ nmos #(44) nmos_Fo8(w7,w31,w27); //  
+ pmos #(36) pmos_AS1_Fo9(w27,vdd,D); //  
+ nmos #(36) nmos_AS2_Fo10(w27,vss,D); //  
+ pmos #(36) pmos_AS3_Fo11(w28,vdd,C); //  
+ nmos #(36) nmos_AS4_Fo12(w28,vss,C); //  
+ nmos #(13) nmos_Fo5_Fo13(w34,w32,w33); //  
+ nmos #(40) nmos_Fo6_Fo14(w36,w34,w35); //  
+ nmos #(13) nmos_Fo7_Fo15(w39,w37,w38); //  
+ nmos #(40) nmos_Fo8_Fo16(w36,w39,w40); //  
+ nmos #(13) nmos_Fo9_Fo17(w42,w41,w33); //  
+ nmos #(40) nmos_Fo10_Fo18(w36,w42,w40); //  
+ nmos #(13) nmos_Fo11_Fo19(w44,w43,w38); //  
+ nmos #(40) nmos_Fo12_Fo20(w36,w44,w35); //  
+ pmos #(39) pmos_AS1_Fo13_Fo21(w35,vdd,w40); //  
+ nmos #(39) nmos_AS2_Fo14_Fo22(w35,vss,w40); //  
+ pmos #(39) pmos_AS3_Fo15_Fo23(w38,vdd,w33); //  
+ nmos #(39) nmos_AS4_Fo16_Fo24(w38,vss,w33); //  
+ nmos #(12) nmos_Fo25(w45,in10,C); //  
+ nmos #(44) nmos_Fo26(w12,w45,w46); //  
+ nmos #(12) nmos_Fo27(w48,in11,w47); //  
+ nmos #(44) nmos_Fo28(w12,w48,D); //  
+ nmos #(12) nmos_Fo29(w49,in9,C); //  
+ nmos #(44) nmos_Fo30(w12,w49,D); //  
+ nmos #(12) nmos_Fo31(w50,in12,w47); //  
+ nmos #(44) nmos_Fo32(w12,w50,w46); //  
+ pmos #(36) pmos_AS1_Fo33(w46,vdd,D); //  
+ nmos #(36) nmos_AS2_Fo34(w46,vss,D); //  
+ pmos #(36) pmos_AS3_Fo35(w47,vdd,C); //  
+ nmos #(36) nmos_AS4_Fo36(w47,vss,C); //  
+ nmos #(13) nmos_Fo5_Fo37(w53,w51,w52); //  
+ nmos #(40) nmos_Fo6_Fo38(w55,w53,w54); //  
+ nmos #(13) nmos_Fo7_Fo39(w58,w56,w57); //  
+ nmos #(40) nmos_Fo8_Fo40(w55,w58,w59); //  
+ nmos #(13) nmos_Fo9_Fo41(w61,w60,w52); //  
+ nmos #(40) nmos_Fo10_Fo42(w55,w61,w59); //  
+ nmos #(13) nmos_Fo11_Fo43(w63,w62,w57); //  
+ nmos #(40) nmos_Fo12_Fo44(w55,w63,w54); //  
+ pmos #(39) pmos_AS1_Fo13_Fo45(w54,vdd,w59); //  
+ nmos #(39) nmos_AS2_Fo14_Fo46(w54,vss,w59); //  
+ pmos #(39) pmos_AS3_Fo15_Fo47(w57,vdd,w52); //  
+ nmos #(39) nmos_AS4_Fo16_Fo48(w57,vss,w52); //  
+ nmos #(12) nmos_Fo49(w64,in14,C); //  
+ nmos #(44) nmos_Fo50(w17,w64,w65); //  
+ nmos #(12) nmos_Fo51(w67,in15,w66); //  
+ nmos #(44) nmos_Fo52(w17,w67,D); //  
+ nmos #(12) nmos_Fo53(w68,in13,C); //  
+ nmos #(44) nmos_Fo54(w17,w68,D); //  
+ nmos #(12) nmos_Fo55(w69,in16,w66); //  
+ nmos #(44) nmos_Fo56(w17,w69,w65); //  
+ pmos #(36) pmos_AS1_Fo57(w65,vdd,D); //  
+ nmos #(36) nmos_AS2_Fo58(w65,vss,D); //  
+ pmos #(36) pmos_AS3_Fo59(w66,vdd,C); //  
+ nmos #(36) nmos_AS4_Fo60(w66,vss,C); //  
+ nmos #(13) nmos_Fo5_Fo61(w72,w70,w71); //  
+ nmos #(40) nmos_Fo6_Fo62(w74,w72,w73); //  
+ nmos #(13) nmos_Fo7_Fo63(w77,w75,w76); //  
+ nmos #(40) nmos_Fo8_Fo64(w74,w77,w78); //  
+ nmos #(13) nmos_Fo9_Fo65(w80,w79,w71); //  
+ nmos #(40) nmos_Fo10_Fo66(w74,w80,w78); //  
+ nmos #(13) nmos_Fo11_Fo67(w82,w81,w76); //  
+ nmos #(40) nmos_Fo12_Fo68(w74,w82,w73); //  
+ pmos #(39) pmos_AS1_Fo13_Fo69(w73,vdd,w78); //  
+ nmos #(39) nmos_AS2_Fo14_Fo70(w73,vss,w78); //  
+ pmos #(39) pmos_AS3_Fo15_Fo71(w76,vdd,w71); //  
+ nmos #(39) nmos_AS4_Fo16_Fo72(w76,vss,w71); //  
+ nmos #(12) nmos_Fo73(w83,in2,C); //  
+ nmos #(44) nmos_Fo74(w22,w83,w84); //  
+ nmos #(12) nmos_Fo75(w86,in3,w85); //  
+ nmos #(44) nmos_Fo76(w22,w86,D); //  
+ nmos #(12) nmos_Fo77(w87,in1,C); //  
+ nmos #(44) nmos_Fo78(w22,w87,D); //  
+ nmos #(12) nmos_Fo79(w88,in4,w85); //  
+ nmos #(44) nmos_Fo80(w22,w88,w84); //  
+ pmos #(36) pmos_AS1_Fo81(w84,vdd,D); //  
+ nmos #(36) nmos_AS2_Fo82(w84,vss,D); //  
+ pmos #(36) pmos_AS3_Fo83(w85,vdd,C); //  
+ nmos #(36) nmos_AS4_Fo84(w85,vss,C); //  
+ nmos #(13) nmos_Fo5_Fo85(w91,w89,w90); //  
+ nmos #(40) nmos_Fo6_Fo86(w93,w91,w92); //  
+ nmos #(13) nmos_Fo7_Fo87(w96,w94,w95); //  
+ nmos #(40) nmos_Fo8_Fo88(w93,w96,w97); //  
+ nmos #(13) nmos_Fo9_Fo89(w99,w98,w90); //  
+ nmos #(40) nmos_Fo10_Fo90(w93,w99,w97); //  
+ nmos #(13) nmos_Fo11_Fo91(w101,w100,w95); //  
+ nmos #(40) nmos_Fo12_Fo92(w93,w101,w92); //  
+ pmos #(39) pmos_AS1_Fo13_Fo93(w92,vdd,w97); //  
+ nmos #(39) nmos_AS2_Fo14_Fo94(w92,vss,w97); //  
+ pmos #(39) pmos_AS3_Fo15_Fo95(w95,vdd,w90); //  
+ nmos #(39) nmos_AS4_Fo16_Fo96(w95,vss,w90); //  
+ nmos #(12) nmos_Fo97(w102,w12,A); //  
+ nmos #(44) nmos_Fo98(Output,w102,w103); //  
+ nmos #(12) nmos_Fo99(w105,w7,w104); //  
+ nmos #(44) nmos_Fo100(Output,w105,B); //  
+ nmos #(12) nmos_Fo101(w106,w17,A); //  
+ nmos #(44) nmos_Fo102(Output,w106,B); //  
+ nmos #(12) nmos_Fo103(w107,w22,w104); //  
+ nmos #(44) nmos_Fo104(Output,w107,w103); //  
+ pmos #(36) pmos_AS1_Fo105(w103,vdd,B); //  
+ nmos #(36) nmos_AS2_Fo106(w103,vss,B); //  
+ pmos #(36) pmos_AS3_Fo107(w104,vdd,A); //  
+ nmos #(36) nmos_AS4_Fo108(w104,vss,A); //  
+ nmos #(13) nmos_Fo5_Fo109(w110,w108,w109); //  
+ nmos #(40) nmos_Fo6_Fo110(w112,w110,w111); //  
+ nmos #(13) nmos_Fo7_Fo111(w115,w113,w114); //  
+ nmos #(40) nmos_Fo8_Fo112(w112,w115,w116); //  
+ nmos #(13) nmos_Fo9_Fo113(w118,w117,w109); //  
+ nmos #(40) nmos_Fo10_Fo114(w112,w118,w116); //  
+ nmos #(13) nmos_Fo11_Fo115(w120,w119,w114); //  
+ nmos #(40) nmos_Fo12_Fo116(w112,w120,w111); //  
+ pmos #(39) pmos_AS1_Fo13_Fo117(w111,vdd,w116); //  
+ nmos #(39) nmos_AS2_Fo14_Fo118(w111,vss,w116); //  
+ pmos #(39) pmos_AS3_Fo15_Fo119(w114,vdd,w109); //  
+ nmos #(39) nmos_AS4_Fo16_Fo120(w114,vss,w109); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 in1=~in1;
+#2000 in2=~in2;
+#4000 in3=~in3;
+#8000 in4=~in4;
+#16000 in5=~in5;
+#32000 in6=~in6;
+#64000 in7=~in7;
+#128000 in8=~in8;
+#256000 in9=~in9;
+#512000 in10=~in10;
+#1024000 in11=~in11;
+#2048000 in12=~in12;
+#4096000 in13=~in13;
+#8192000 in14=~in14;
+#16384000 in15=~in15;
+#32768000 in16=~in16;
+#65536000 A=~A;
+#131072000 B=~B;
+#262144000 C=~C;
+#524288000 D=~D;
+
+// Simulation parameters
+// in1 CLK 10 10
+// in2 CLK 20 20
+// in3 CLK 40 40
+// in4 CLK 80 80
+// in5 CLK 160 160
+// in6 CLK 320 320
+// in7 CLK 640 640
+// in8 CLK 1280 1280
+// in9 CLK 2560 2560
+// in10 CLK 5120 5120
+// in11 CLK 10240 10240
+// in12 CLK 20480 20480
+// in13 CLK 40960 40960
+// in14 CLK 81920 81920
+// in15 CLK 163840 163840
+// in16 CLK 327680 327680
+// A CLK 655360 655360
+// B CLK 1310720 1310720
+// C CLK 2621440 2621440
+// D CLK 5242880 5242880
